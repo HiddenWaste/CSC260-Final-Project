@@ -1,0 +1,103 @@
+<Project>
+  <Name>Final Project</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>Class Diagram</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ApiHandler</Name>
+        <Access>Public</Access>
+        <Location left="1286" top="34" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string apiKey</Member>
+        <Member type="Field">string url</Member>
+        <Member type="Field">List Params</Member>
+        <Member type="Method">public void MakeAPICall()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LastFmWidget</Name>
+        <Access>Public</Access>
+        <Location left="1047" top="433" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string lastFmApiKey</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Button</Name>
+        <Access>Public</Access>
+        <Location left="1098" top="23" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int buttonId</Member>
+        <Member type="Field">string buttonName</Member>
+        <Member type="Method">public void OnClick()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Dashboard</Name>
+        <Access>Public</Access>
+        <Location left="652" top="48" />
+        <Size width="168" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">list&lt;ApiWidget&gt; widgets</Member>
+        <Member type="Field">list&lt;Button&gt; buttons</Member>
+        <Member type="Method">public void AddWidget()</Member>
+        <Member type="Method">public void AddButton()</Member>
+        <Member type="Method">public void Display()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ApiWidget</Name>
+        <Access>Public</Access>
+        <Location left="900" top="23" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int widgetId</Member>
+        <Member type="Field">string widgetName</Member>
+        <Member type="Method">public void Display()</Member>
+        <Member type="Method">public void GetData()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IApiWidget</Name>
+        <Access>Public</Access>
+        <Location left="826" top="433" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void GetData()</Member>
+        <Member type="Method">void Display()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>WeatherWidget</Name>
+        <Access>Public</Access>
+        <Location left="608" top="433" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int weatherApiKey</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="5" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
